@@ -1,6 +1,6 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "alegra"
-require './lib/alegra'
+require 'alegra'
+Dir[File.join('./lib/alegra/**/*.rb')].each { |f| require f }
 require 'rspec'
 require 'webmock/rspec'
 require 'vcr'

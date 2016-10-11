@@ -1,5 +1,5 @@
-require "alegra/version"
+require 'alegra/version'
+require 'alegra/invoice'
 
 module Alegra
-  # Your code goes here...
 end
