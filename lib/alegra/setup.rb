@@ -1,15 +1,15 @@
 require 'faraday'
 require 'json'
+require 'base64'
 
 module Alegra
   class Setup
-    attr_accessor :host, :path, :apikey, :username, :debug, :session, :token
+    attr_accessor :host, :path, :apikey, :username, :debug, :token
 
     def initialize(username=nil, apikey=nil, debug=false)
       @host = 'https://app.alegra.com/'
       @path = 'api/v1/'
 
-      @session = Faraday.new url: @host
       @debug = debug
 
       if not apikey
@@ -38,22 +38,7 @@ module Alegra
     end
 
     def create_token!
-      @token = Base64.encode64("#{@username}:#{@apikey}")
-    end
-
-    def call(url, params={})
-        params[:key] = @apikey
-        params = JSON.generate(params)
-
-        response = @session.post do |req|
-          req.url "#{@path}#{url}.json"
-          req.headers['Content-Type'] = 'application/json'
-          req.headers['Accept'] = 'application/json'
-          req.body params
-        end
-
-        # cast_error(r.body) if r.status != 200
-        return JSON.parse(response.body)
+      @token = ::Base64.encode64("#{@username}:#{@apikey}")
     end
   end
 end
