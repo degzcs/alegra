@@ -18,6 +18,15 @@ describe Alegra::Invoices do
       end
     end
 
+    it 'should get all invoices' do
+      VCR.use_cassette('all_simple_invoice') do
+        client = Alegra::Client.new(@params[:username], @params[:apikey])
+        invoices = client.invoices.list()
+        expect(invoices.class).to eq Array
+        expect(invoices).to eq(invoice3_response)
+      end
+    end
+
     it 'should create a simple invoice' do
       VCR.use_cassette('create_simple_invoice') do
         _params = {
