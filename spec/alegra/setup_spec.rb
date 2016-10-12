@@ -6,8 +6,8 @@ describe Alegra::Setup do
   context 'connect with alegra API' do
     before :each do
       @setup_params = {
-        username: 'ejemploapi@alegra.com',
-        apikey: 'tokenejemploapi12345'
+        username: 'ejemploapi@dayrep.com',
+        apikey: '066b3ab09e72d4548e88'
       }
     end
 
