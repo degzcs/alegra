@@ -6,4 +6,8 @@ module JsonReponses
   def invoice2_response
     JSON.parse(File.read('./spec/fixtures/invoice2.json'))
   end
+
+  def invoice3_response
+    JSON.parse(File.read('./spec/fixtures/invoice3.json'))
+  end
 end
