@@ -16,7 +16,6 @@ module Alegra
           req.headers['Accept'] = 'application/json'
           req.headers['Authorization'] = "Basic #{ @token }"
         end
-
         cast_error(response) unless (response.status == 200 || response.status == 201)
         return JSON.parse(response.body)
     end
@@ -28,17 +27,16 @@ module Alegra
           req.headers['Content-Type'] = 'application/json'
           req.headers['Accept'] = 'application/json'
           req.headers['Authorization'] = "Basic #{ @token }"
-          req.body params
+          req.body = params
         end
-
         cast_error(response) unless (response.status == 200 || response.status == 201)
         return JSON.parse(response.body)
     end
 
     def cast_error(response)
       error_map = {
-        500 => 'Sever error! There is somethign wrong in the server side.',
-        400 => 'Bad request!',
+        500 => 'Sever error! Something were wrong in the server.',
+        400 => "Bad request!, #{ JSON.parse(response.body)['message'] }",
         401 => 'Authentication error!',
         402 => 'Required payment!',
         403 => 'Restricted access!',
