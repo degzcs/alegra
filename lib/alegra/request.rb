@@ -40,8 +40,8 @@ module Alegra
         401 => 'Authentication error!',
         402 => 'Required payment!',
         403 => 'Restricted access!',
-        403 => 'Not found!',
-        403 => 'Operation does not allowed!',
+        404 => 'Not found!',
+        405 => 'Operation does not allowed!',
       }
       raise StandardError, "Status: #{ response.status }. Error: #{ error_map[response.status] }"
     end
