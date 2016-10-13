@@ -38,5 +38,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "jazz_fingers", "~> 4"
 
   spec.add_dependency "faraday", "~> 0.9"
-  spec.add_dependency "json", "~> 2"
+  spec.add_dependency "json", "~> 1.7"
 end
