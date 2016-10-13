@@ -33,7 +33,7 @@ client.invoices.list()
 
 ## Get an specific invoice
 
-client.invoces.find(1) # the parameter is the inovice id
+client.invoices.find(1) # the parameter is the inovice id
 
 ## Create an Invoice
 params = {
