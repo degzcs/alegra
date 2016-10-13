@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["diego.f.gomez.pardo@gmail.com"]
 
   spec.summary       = %q{Gem to wrap Alegra API.}
-  spec.description   = %q{Gem to wrap Alegra API.}
+  spec.description   = %q{Gem to wrap Alegra API. This is unofficial gem (until now)}
   spec.homepage      = "https://github.com/degzcs/alegra"
   spec.license       = "MIT"
 
@@ -33,10 +33,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "vcr"
-  spec.add_development_dependency "webmock"
-  spec.add_development_dependency "jazz_fingers"
+  spec.add_development_dependency "vcr", "~> 3"
+  spec.add_development_dependency "webmock", "~> 2.1"
+  spec.add_development_dependency "jazz_fingers", "~> 4"
 
-  spec.add_dependency "faraday"
-  spec.add_dependency "json"
+  spec.add_dependency "faraday", "~> 0.9"
+  spec.add_dependency "json", "~> 2"
 end
