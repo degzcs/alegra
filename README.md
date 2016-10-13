@@ -1,6 +1,6 @@
 # Alegra
 
-A ruby client for connecting to the [Alegra](www.alegra.com)'s API. 
+A ruby client for connecting to the [Alegra](http://www.alegra.com)'s API. 
 
 Please check the official API documentation [here](http://developer.alegra.com/) 
 
