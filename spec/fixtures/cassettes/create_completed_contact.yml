@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.alegra.com/api/v1/contacts
+    body:
+      encoding: UTF-8
+      string: '{"name":"Armando Casas","identification":"963.654.988","email":"armando.casas@alegra.com","phonePrimary":"111
+        11 11","seller":{"id":"1"},"term":{"id":2},"type":["client"],"address":{"address":"Avenida
+        Madison","city":"New York, USA"},"internalContacts":[{"name":"Lina","lastName":"Montoya","email":"prueba4@alegra.com","phone":"123
+        45 67 ext 25","mobile":"(333) 333 33 33","sendNotifications":"no"}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic ZWplbXBsb2FwaUBkYXlyZXAuY29tOjA2NmIzYWIwOWU3MmQ0NTQ4ZTg4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 14 Oct 2016 15:44:17 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.10.0
+      X-Powered-By:
+      - PHP/7.0.9
+      Set-Cookie:
+      - PHPSESSID=0eipbh96sn7lkl8j87bpl4e786; expires=Sun, 14-Oct-2018 15:44:16 GMT;
+        Max-Age=63072000; path=/; secure; HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-cache
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
+        X-HTTP-Method-Override, X-Data-Source
+      Access-Control-Allow-Methods:
+      - DELETE
+      - PUT
+      X-Rate-Limit-Limit:
+      - '150'
+      X-Rate-Limit-Reset:
+      - "-2"
+      X-Rate-Limit-Remaining:
+      - '149'
+    body:
+      encoding: UTF-8
+      string: '{"id":"4","name":"Armando Casas","identification":"963.654.988","email":"armando.casas@alegra.com","phonePrimary":"111
+        11 11","phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"address":{"address":"Avenida
+        Madison","city":"New York, USA"},"type":["client"],"seller":{"id":"1","name":"Elmo
+        Caritas","identification":"123123123","observations":"Elmo Caritas"},"term":{"id":"2","name":"8
+        d\u00edas","days":"8"},"priceList":null,"internalContacts":[{"id":"2","name":"Lina","lastName":"Montoya","email":"prueba4@alegra.com","phone":"123
+        45 67 ext 25","mobile":"(333) 333 33 33","sendNotifications":false}]}'
+    http_version: 
+  recorded_at: Fri, 14 Oct 2016 15:44:17 GMT
+recorded_with: VCR 3.0.3
