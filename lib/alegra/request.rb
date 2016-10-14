@@ -34,9 +34,10 @@ module Alegra
     end
 
     def cast_error(response)
+      message = response.body.empty? ? response.body : JSON.parse(response.body)['message']
       error_map = {
         500 => 'Sever error! Something were wrong in the server.',
-        400 => "Bad request!, #{ JSON.parse(response.body)['message'] }",
+        400 => "Bad request!, #{ message }",
         401 => 'Authentication error!',
         402 => 'Required payment!',
         403 => 'Restricted access!',
