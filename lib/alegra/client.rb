@@ -1,6 +1,7 @@
 require 'alegra/setup'
 require 'alegra/request'
 require 'alegra/invoices'
+require 'alegra/contacts'
 
 module Alegra
   class Client
@@ -20,6 +21,10 @@ module Alegra
 
     def invoices
       Alegra::Invoices.new(self)
+    end
+
+    def contacts
+      Alegra::Contacts.new(self)
     end
   end
 end
