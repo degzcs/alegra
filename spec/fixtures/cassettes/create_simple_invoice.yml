@@ -24,7 +24,7 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Wed, 12 Oct 2016 20:32:39 GMT
+      - Fri, 14 Oct 2016 14:47:14 GMT
       Content-Type:
       - text/html; charset=UTF-8
       Transfer-Encoding:
@@ -36,7 +36,7 @@ http_interactions:
       X-Powered-By:
       - PHP/7.0.9
       Set-Cookie:
-      - PHPSESSID=tkfvjotq0a9ucakd16qrjkhfm6; expires=Fri, 12-Oct-2018 20:32:39 GMT;
+      - PHPSESSID=dchbb0r2gg3ucofbqndf27s224; expires=Sun, 14-Oct-2018 14:47:13 GMT;
         Max-Age=63072000; path=/; secure; HttpOnly
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
@@ -62,18 +62,18 @@ http_interactions:
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - "-2"
+      - '57'
       X-Rate-Limit-Remaining:
-      - '149'
+      - '146'
     body:
       encoding: UTF-8
-      string: '{"id":"2","date":"2016-10-12","dueDate":"2016-10-12","observations":null,"anotation":null,"termsConditions":"Esta
+      string: '{"id":"4","date":"2016-10-12","dueDate":"2016-10-12","observations":null,"anotation":null,"termsConditions":"Esta
         factura se asimila en todos sus efectos a una letra de cambio de conformidad
         con el Art. 774 del c\u00f3digo de comercio. Autorizo que en caso de incumplimiento
         de esta obligaci\u00f3n sea reportado a las centrales de riesgo, se cobraran
         intereses por mora.","status":"draft","client":{"id":"1","name":"cliente","identification":"123456789","phonePrimary":"","phoneSecondary":"","fax":"","mobile":"3004232123","email":"cliente@test.com","address":{"address":"calle
-        1 # 3-2","city":"Medellin"}},"numberTemplate":{"id":"1","prefix":null,"number":"2","text":null},"total":284,"totalPaid":0,"seller":null,"priceList":null,"items":[{"id":1,"name":"item1","description":null,"price":40,"discount":"","reference":null,"quantity":5,"tax":[],"total":200},{"id":2,"name":"item2","description":"Brown
+        1 # 3-2","city":"Medellin"}},"numberTemplate":{"id":"1","prefix":null,"number":"4","text":null},"total":284,"totalPaid":0,"seller":null,"priceList":null,"items":[{"id":1,"name":"item1","description":null,"price":40,"discount":"","reference":null,"quantity":5,"tax":[],"total":200},{"id":2,"name":"item2","description":"Brown
         leather wallet","price":80,"discount":"10","reference":null,"quantity":1,"tax":[{"id":"3","name":"IVA","percentage":"16.00","description":"","type":"IVA"}],"total":84}]}'
     http_version: 
-  recorded_at: Wed, 12 Oct 2016 20:32:39 GMT
+  recorded_at: Fri, 14 Oct 2016 14:47:14 GMT
 recorded_with: VCR 3.0.3

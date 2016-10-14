@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 12 Oct 2016 20:13:27 GMT
+      - Fri, 14 Oct 2016 14:47:11 GMT
       Content-Type:
       - text/html; charset=UTF-8
       Transfer-Encoding:
@@ -35,7 +35,7 @@ http_interactions:
       X-Powered-By:
       - PHP/7.0.9
       Set-Cookie:
-      - PHPSESSID=vmor0cs2p7r4q2om3mnkj714p3; expires=Fri, 12-Oct-2018 20:13:27 GMT;
+      - PHPSESSID=urk8i6rue2i2tu3urq56gfn976; expires=Sun, 14-Oct-2018 14:47:11 GMT;
         Max-Age=63072000; path=/; secure; HttpOnly
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
@@ -61,9 +61,9 @@ http_interactions:
       X-Rate-Limit-Limit:
       - '150'
       X-Rate-Limit-Reset:
-      - "-2"
+      - '59'
       X-Rate-Limit-Remaining:
-      - '149'
+      - '148'
     body:
       encoding: UTF-8
       string: '{"id":"1","date":"2016-10-12","dueDate":"2016-10-12","observations":"","anotation":"invoice
@@ -75,5 +75,5 @@ http_interactions:
         de venta 1","price":40,"discount":"0.00","reference":"ref1","quantity":"1.00","tax":[{"id":"3","name":"IVA","percentage":"16.00","description":"","type":"IVA"}],"total":46},{"id":2,"name":"item2","description":"item2
         de venta","price":80,"discount":"0.00","reference":"ref2","quantity":"1.00","tax":[{"id":"3","name":"IVA","percentage":"16.00","description":"","type":"IVA"}],"total":93}]}'
     http_version: 
-  recorded_at: Wed, 12 Oct 2016 20:13:27 GMT
+  recorded_at: Fri, 14 Oct 2016 14:47:11 GMT
 recorded_with: VCR 3.0.3

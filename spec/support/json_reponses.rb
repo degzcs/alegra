@@ -1,13 +1,33 @@
 module JsonReponses
-  def invoice1_response
-    JSON.parse(File.read('./spec/fixtures/invoice1.json'))
+  #
+  # Invoice reponses
+  #
+
+  def simple_invoice_response
+    JSON.parse(File.read('./spec/fixtures/simple_invoice_response.json'))
   end
 
-  def invoice2_response
-    JSON.parse(File.read('./spec/fixtures/invoice2.json'))
+  def create_invoice_response
+    JSON.parse(File.read('./spec/fixtures/create_invoice_response.json'))
   end
 
-  def invoice3_response
-    JSON.parse(File.read('./spec/fixtures/invoice3.json'))
+  def invoices_group_response
+    JSON.parse(File.read('./spec/fixtures/invoices_group_response.json'))
+  end
+
+  #
+  # Contact Reponses
+  #
+
+  def simple_contact_response
+    JSON.parse(File.read('./spec/fixtures/simple_contact_response.json'))
+  end
+
+  def contacts_group_response
+    JSON.parse(File.read('./spec/fixtures/contacts_group_response.json'))
+  end
+
+  def create_contact_response
+    JSON.parse(File.read('./spec/fixtures/create_contact_response.json'))
   end
 end

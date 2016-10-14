@@ -14,16 +14,16 @@ describe Alegra::Invoices do
         client = Alegra::Client.new(@params[:username], @params[:apikey])
         invoice = client.invoices.find(1)
         expect(invoice.class).to eq Hash
-        expect(invoice).to include(invoice1_response)
+        expect(invoice).to include(simple_invoice_response)
       end
     end
 
     it 'should get all invoices' do
-      VCR.use_cassette('all_simple_invoice') do
+      VCR.use_cassette('list_of_invoices') do
         client = Alegra::Client.new(@params[:username], @params[:apikey])
         invoices = client.invoices.list()
         expect(invoices.class).to eq Array
-        expect(invoices).to eq(invoice3_response)
+        expect(invoices).to eq(invoices_group_response)
       end
     end
 
@@ -61,8 +61,11 @@ describe Alegra::Invoices do
         client = Alegra::Client.new(@params[:username], @params[:apikey])
         invoice = client.invoices.create(_params)
         expect(invoice.class).to eq Hash
-        expect(invoice).to include(invoice2_response)
+        expect(invoice).to include(create_invoice_response)
       end
+    end
+
+    it 'should create a completed invoice' do
     end
   end
 end

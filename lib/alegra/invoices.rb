@@ -13,7 +13,7 @@ module Alegra
     end
 
     # Returs all invoices
-    # @return [ Hash ]
+    # @return [ Array ]
     def list()
       client.get('invoices')
     end
