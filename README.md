@@ -1,6 +1,6 @@
 # Alegra
 
-A ruby client for connecting to the [Alegra](http://www.alegra.com)'s API. 
+A ruby client for connecting to [Alegra](http://www.alegra.com)'s API. 
 
 Please check the official API documentation [here](http://developer.alegra.com/) 
 
@@ -26,16 +26,44 @@ Or install it yourself as:
 
 require 'alegra'
 client = Alegra::Client.new('youremail@test.com', 'your-private-token')
+```
 
-## Get Invoices
+### Contacts
 
+You can list all your contacts:
+```ruby
+client.contacts.list()
+```
+
+Get a specific contact by id:
+
+```ruby
+client.contacts.find(1)
+```
+
+And you can create a contact as well:
+
+```ruby
+params = {
+  name: 'Alan Britho'
+}
+client.contacts.create(params)
+```
+
+### Invoices 
+
+You can get all invoices:
+```ruby 
 client.invoices.list()
+```
 
-## Get an specific invoice
-
+Or get a specific invoice by id:
+```ruby
 client.invoices.find(1) # the parameter is the inovice id
+```
 
-## Create an Invoice
+Also you are able to create a new invoice, as follows:
+```ruby
 params = {
           date: '2016-10-12',
           due_date: '2016-10-12',
