@@ -33,6 +33,19 @@ module Alegra
         return JSON.parse(response.body)
     end
 
+    def put(url, params={})
+      params = JSON.generate(params)
+      response = @session.put do |req|
+        req.url "#{ @path }#{ url }"
+        req.headers['Content-Type'] = 'application/json'
+        req.headers['Accept'] = 'application/json'
+        req.headers['Authorization'] = "Basic #{ @token }"
+        req.body = params
+      end
+      cast_error(response) unless (response.status == 200 || response.status == 201)
+      return JSON.parse(response.body)
+    end
+
     def cast_error(response)
       message = response.body.empty? ? response.body : JSON.parse(response.body)['message']
       error_map = {
