@@ -19,6 +19,11 @@ module Alegra
       request.post(url, params)
     end
 
+    def put(url, params={})
+      request = Alegra::Request.new(@setup.host, @setup.path, @setup.token)
+      request.put(url, params)
+    end
+
     def invoices
       Alegra::Invoices.new(self)
     end
