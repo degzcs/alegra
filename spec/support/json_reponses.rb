@@ -34,4 +34,8 @@ module JsonReponses
   def create_completed_contact_response
     JSON.parse(File.read('./spec/fixtures/create_completed_contact_response.json'))
   end
+
+  def update_contact_response
+    JSON.parse(File.read('./spec/fixtures/update_contact_response.json'))
+  end
 end

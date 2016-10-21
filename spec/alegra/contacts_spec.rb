@@ -45,7 +45,7 @@ describe Alegra::Contacts do
                 name: 'Armando Casas',
                 identification: '963.654.988',
                 email: 'armando.casas@alegra.com',
-                phonePrimary: '111 11 11',
+                phone_primary: '111 11 11',
                 seller: {
                         id: '1'
                         },
@@ -58,14 +58,14 @@ describe Alegra::Contacts do
                     address: 'Avenida Madison',
                     city: 'New York, USA'
                     },
-                internalContacts: [
+                internal_contacts: [
                             {
                                 name: 'Lina',
-                                lastName: 'Montoya',
+                                last_name: 'Montoya',
                                 email: 'prueba4@alegra.com',
                                 phone: '123 45 67 ext 25',
                                 mobile: '(333) 333 33 33',
-                                sendNotifications: 'no'
+                                send_notifications: 'no'
                             }
                     ]
               }
@@ -73,6 +73,16 @@ describe Alegra::Contacts do
         contact = client.contacts.create(_params)
         expect(contact.class).to eq Hash
         expect(contact).to eq(create_completed_contact_response)
+      end
+    end
+
+    it 'should update a contact' do
+      VCR.use_cassette('update_completed_contact') do
+        _params = { name: 'A. Sara Osa'}
+        client = Alegra::Client.new(@params[:username], @params[:apikey])
+        contact = client.contacts.update(1, _params)
+        expect(contact.class).to eq Hash
+        expect(contact).to eq(update_contact_response)
       end
     end
   end
