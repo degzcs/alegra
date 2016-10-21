@@ -24,6 +24,11 @@ module Alegra
       request.put(url, params)
     end
 
+    def delete(url, params={})
+      request = Alegra::Request.new(@setup.host, @setup.path, @setup.token)
+      request.delete(url, params)
+    end
+
     def invoices
       Alegra::Invoices.new(self)
     end
