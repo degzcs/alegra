@@ -85,5 +85,14 @@ describe Alegra::Contacts do
         expect(contact).to eq(update_contact_response)
       end
     end
+
+    it 'should delete a contact' do
+      VCR.use_cassette('delete_contact') do
+        client = Alegra::Client.new(@params[:username], @params[:apikey])
+        contact = client.contacts.delete(9)
+        expect(contact.class).to eq Hash
+        expect(contact).to eq({"code"=>200, "message"=>"El contacto fue eliminado correctamente."})
+      end
+    end
   end
 end
