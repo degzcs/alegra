@@ -50,6 +50,19 @@ params = {
 client.contacts.create(params)
 ```
 
+You can update this contact too:
+```ruby 
+params = {
+  name: 'Sinc Hompas'
+}
+client.contacts.update(1, params)
+```
+
+Or delete it, as follows:
+```ruby 
+client.contacts.delete(1)
+```
+
 ### Invoices 
 
 You can get all invoices:
@@ -97,6 +110,17 @@ params = {
 client.invoices.create(params)
 ```
 
+Update that invoice:
+```ruby 
+params = { observations: 'This invoice was updated!'}
+client.invoices.update(1, params)
+```
+
+Send that invoice by email:
+```ruby
+params = { emails: ['your.email@alegra.com', 'another.eail@algra.com'], send_copy_to_user: true, invoice_type: 'copy'}
+client.invoices.send_by_email(1, params)
+```
 ## Development
 
 This gem is under construction and I'm writing it as I would like to use it. However, if you have any recommendation is well received. 
