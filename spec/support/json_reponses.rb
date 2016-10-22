@@ -15,6 +15,10 @@ module JsonReponses
     JSON.parse(File.read('./spec/fixtures/invoices_group_response.json'))
   end
 
+  def update_invoice_response
+    JSON.parse(File.read('./spec/fixtures/update_invoice_response.json'))
+  end
+
   #
   # Contact Reponses
   #

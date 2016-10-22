@@ -65,6 +65,28 @@ describe Alegra::Invoices do
       end
     end
 
+    it 'should update an invoice' do
+      VCR.use_cassette('update_invoice') do
+        _params = { observations: 'This invoice has been updated!' }
+        client = Alegra::Client.new(@params[:username], @params[:apikey])
+        invoice = client.invoices.update(1, _params)
+        expect(invoice.class).to eq Hash
+        expect(invoice).to include(update_invoice_response)
+      end
+    end
+
+    it 'should send an invoice by email' do
+      VCR.use_cassette('send_email_invoice_response') do
+        _params = {
+          emails: [ 'test@alegra.com']
+        }
+        client = Alegra::Client.new(@params[:username], @params[:apikey])
+        invoice = client.invoices.send_by_email(1, _params)
+        expect(invoice.class).to eq Hash
+        expect(invoice).to include({"code"=>"200", "message"=>"La factura fue enviada exitosamente"})
+      end
+    end
+
     it 'should create a completed invoice' do
     end
   end
