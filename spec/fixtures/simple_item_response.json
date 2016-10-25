@@ -1,0 +1,8 @@
+{"id":1,
+ "name":"item1",
+ "description":"item de venta 1",
+ "reference":"ref1",
+ "status":"active",
+ "category":{"id":"3", "name":"Ventas"},
+ "price":[{"idPriceList":"1", "name":"General", "price":"40.0000"}],
+ "tax":[{"id":"3", "name":"IVA", "percentage":"16.00", "description":""}]}

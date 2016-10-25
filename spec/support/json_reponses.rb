@@ -42,4 +42,24 @@ module JsonReponses
   def update_contact_response
     JSON.parse(File.read('./spec/fixtures/update_contact_response.json'))
   end
+
+  #
+  # Item Responses
+  #
+
+  def items_group_response
+    JSON.parse(File.read('./spec/fixtures/items_group_response.json'))
+  end
+
+  def simple_item_response
+    JSON.parse(File.read('./spec/fixtures/simple_item_response.json'))
+  end
+
+  def create_item_response
+    JSON.parse(File.read('./spec/fixtures/create_item_response.json'))
+  end
+
+  def update_item_response
+    JSON.parse(File.read('./spec/fixtures/update_item_response.json'))
+  end
 end

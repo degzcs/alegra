@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://app.alegra.com/api/v1/items/3
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic ZWplbXBsb2FwaUBkYXlyZXAuY29tOjA2NmIzYWIwOWU3MmQ0NTQ4ZTg4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 25 Oct 2016 16:49:04 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.10.0
+      X-Powered-By:
+      - PHP/7.0.9
+      Set-Cookie:
+      - PHPSESSID=isoqajkdrnu3qbmqnu74gt7t90; expires=Thu, 25-Oct-2018 16:49:04 GMT;
+        Max-Age=63072000; path=/; secure; HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-cache
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
+        X-HTTP-Method-Override, X-Data-Source
+      Access-Control-Allow-Methods:
+      - DELETE
+      - PUT
+      X-Rate-Limit-Limit:
+      - '150'
+      X-Rate-Limit-Reset:
+      - "-2"
+      X-Rate-Limit-Remaining:
+      - '149'
+    body:
+      encoding: UTF-8
+      string: '{"code":200,"message":"El \u00edtem fue eliminado correctamente."}'
+    http_version: 
+  recorded_at: Tue, 25 Oct 2016 16:49:05 GMT
+recorded_with: VCR 3.0.3

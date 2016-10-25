@@ -36,5 +36,9 @@ module Alegra
     def contacts
       Alegra::Contacts.new(self)
     end
+
+    def items
+      Alegra::Items.new(self)
+    end
   end
 end
