@@ -17,7 +17,7 @@ module Alegra
           req.headers['Authorization'] = "Basic #{ @token }"
         end
         cast_error(response) unless (response.status == 200 || response.status == 201)
-        return JSON.parse(response.body)
+        return Alegra::Response.new(response.body).call
     end
 
     def post(url, params={})
@@ -30,7 +30,7 @@ module Alegra
           req.body = params
         end
         cast_error(response) unless (response.status == 200 || response.status == 201)
-        return JSON.parse(response.body)
+        return Alegra::Response.new(response.body).call
     end
 
     def put(url, params={})
@@ -43,7 +43,7 @@ module Alegra
         req.body = params
       end
       cast_error(response) unless (response.status == 200 || response.status == 201)
-      return JSON.parse(response.body)
+      return Alegra::Response.new(response.body).call
     end
 
 
@@ -57,11 +57,11 @@ module Alegra
         req.body = params
       end
       cast_error(response) unless (response.status == 200 || response.status == 201)
-      return JSON.parse(response.body)
+      return Alegra::Response.new(response.body).call
     end
 
     def cast_error(response)
-      message = response.body.empty? ? response.body : JSON.parse(response.body)['message']
+      message = response.body.empty? ? response.body : Alegra::Response.new(response.body).call['message']
       error_map = {
         500 => 'Sever error! Something were wrong in the server.',
         400 => "Bad request!, #{ message }",
