@@ -63,6 +63,42 @@ Or delete it, as follows:
 client.contacts.delete(1)
 ```
 
+### Items
+
+You can list all your items:
+```ruby
+client.items.list()
+```
+
+Get a specific item by id:
+
+```ruby
+client.items.find(1)
+```
+
+And you can create an item as well:
+
+```ruby
+params = {
+  name: 'a new item',
+  price: 1500
+}
+client.items.create(params)
+```
+
+You can update this item too:
+```ruby 
+params = {
+  name: 'A better name!',
+}
+client.items.update(1, params)
+```
+
+Or delete it, as follows:
+```ruby 
+client.items.delete(1)
+```
+
 ### Invoices 
 
 You can get all invoices:
