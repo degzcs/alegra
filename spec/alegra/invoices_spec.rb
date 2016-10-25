@@ -83,7 +83,7 @@ describe Alegra::Invoices do
         client = Alegra::Client.new(@params[:username], @params[:apikey])
         invoice = client.invoices.send_by_email(1, _params)
         expect(invoice.class).to eq Hash
-        expect(invoice).to include({"code"=>"200", "message"=>"La factura fue enviada exitosamente"})
+        expect(invoice).to include({code: "200", message: "La factura fue enviada exitosamente"})
       end
     end
 
