@@ -1,9 +1,0 @@
-{"id":"3",
- "name":"leather",
- "description":"Brown leather wallet",
- "reference":"CAR-195",
- "status":"active",
- "category":{"id":"1", "name":"Ingresos"},
- "price":[{"idPriceList":"1", "name":"General", "price":"4050.0000"}],
- "inventory":{"initialQuantity":160, "unit":"piece", "availableQuantity":160, "unitCost":2560},
- "tax":[{"id":"3", "name":"IVA", "percentage":"16.00", "description":""}]}
