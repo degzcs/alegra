@@ -1,3 +1,4 @@
+require 'alegra/response'
 module Alegra
   class Request
     attr_accessor :path, :token, :session
