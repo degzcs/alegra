@@ -2,6 +2,7 @@ require 'alegra/setup'
 require 'alegra/request'
 require 'alegra/invoices'
 require 'alegra/contacts'
+require 'alegra/items'
 
 module Alegra
   class Client
