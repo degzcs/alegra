@@ -159,7 +159,7 @@ client.invoices.send_by_email(1, params)
 ```
 ## Development
 
-This gem is under construction and I'm writing it as I would like to use it. However, if you have any recommendation is well received. 
+This gem is under construction and I'm writing it with the goal that it will easy to use. However, if you have any recommendation is well received. 
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
