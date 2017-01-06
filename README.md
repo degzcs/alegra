@@ -1,5 +1,6 @@
 # Alegra
 [![Build Status](https://travis-ci.org/degzcs/alegra.svg?branch=master)](https://travis-ci.org/degzcs/alegra)
+
 A ruby client for connecting to [Alegra](http://www.alegra.com)'s API.
 
 Please check the official API documentation [here](http://developer.alegra.com/)
