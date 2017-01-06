@@ -1,8 +1,8 @@
 # Alegra
+[![Build Status](https://travis-ci.org/degzcs/alegra.svg?branch=master)](https://travis-ci.org/degzcs/alegra)
+A ruby client for connecting to [Alegra](http://www.alegra.com)'s API.
 
-A ruby client for connecting to [Alegra](http://www.alegra.com)'s API. 
-
-Please check the official API documentation [here](http://developer.alegra.com/) 
+Please check the official API documentation [here](http://developer.alegra.com/)
 
 ## Installation
 
@@ -14,7 +14,7 @@ gem 'alegra'
 
 And then execute:
 
-    $ bundle install 
+    $ bundle install
 
 Or install it yourself as:
 
@@ -51,7 +51,7 @@ client.contacts.create(params)
 ```
 
 You can update this contact too:
-```ruby 
+```ruby
 params = {
   name: 'Sinc Hompas'
 }
@@ -59,7 +59,7 @@ client.contacts.update(1, params)
 ```
 
 Or delete it, as follows:
-```ruby 
+```ruby
 client.contacts.delete(1)
 ```
 
@@ -87,7 +87,7 @@ client.items.create(params)
 ```
 
 You can update this item too:
-```ruby 
+```ruby
 params = {
   name: 'A better name!',
 }
@@ -95,14 +95,14 @@ client.items.update(1, params)
 ```
 
 Or delete it, as follows:
-```ruby 
+```ruby
 client.items.delete(1)
 ```
 
-### Invoices 
+### Invoices
 
 You can get all invoices:
-```ruby 
+```ruby
 client.invoices.list()
 ```
 
@@ -147,7 +147,7 @@ client.invoices.create(params)
 ```
 
 Update that invoice:
-```ruby 
+```ruby
 params = { observations: 'This invoice was updated!'}
 client.invoices.update(1, params)
 ```
@@ -159,7 +159,7 @@ client.invoices.send_by_email(1, params)
 ```
 ## Development
 
-This gem is under construction and I'm writing it with the goal that it will easy to use. However, if you have any recommendation is well received. 
+This gem is under construction and I'm writing it with the goal that it will easy to use. However, if you have any recommendation is well received.
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
@@ -168,6 +168,15 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/degzcs/alegra. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## TODO
+The next endpoints are pending:
+
+- Estimates
+- Number templates
+- Retentions
+- Categories
+- Sellers
 
 ## License
 
