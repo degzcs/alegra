@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Alegra::Invoices do
-  context 'simple invoice' do
+  context 'Invoices' do
     before :each do
       @params = {
         username: 'ejemploapi@dayrep.com',
@@ -21,7 +23,7 @@ describe Alegra::Invoices do
     it 'should get all invoices' do
       VCR.use_cassette('list_of_invoices') do
         client = Alegra::Client.new(@params[:username], @params[:apikey])
-        invoices = client.invoices.list()
+        invoices = client.invoices.list
         expect(invoices.class).to eq Array
         expect(invoices).to eq(invoices_group_response)
       end
@@ -34,29 +36,29 @@ describe Alegra::Invoices do
           due_date: '2016-10-12',
           client: 1,
           items: [
-                    {
-                        id: 1,
-                        price: 40,
-                        quantity: 5
-                    },
-                    {
-                        id: 2,
-                        description: 'Brown leather wallet',
-                        price: 80,
-                        discount: 10,
-                        tax: [
-                                {
-                                    id: 3,
-                                }
-                             ],
-                        quantity: 1
-                    }
-                  ],
+            {
+              id: 1,
+              price: 40,
+              quantity: 5
+            },
+            {
+              id: 2,
+              description: 'Brown leather wallet',
+              price: 80,
+              discount: 10,
+              tax: [
+                {
+                  id: 3
+                }
+              ],
+              quantity: 1
+            }
+          ],
           account_number: 1234,
           payment_method: 'cash',
           stamp: {
             generate_stamp: true
-          },
+          }
         }
         client = Alegra::Client.new(@params[:username], @params[:apikey])
         invoice = client.invoices.create(_params)
@@ -78,12 +80,12 @@ describe Alegra::Invoices do
     it 'should send an invoice by email' do
       VCR.use_cassette('send_email_invoice_response') do
         _params = {
-          emails: [ 'test@alegra.com']
+          emails: ['test@alegra.com']
         }
         client = Alegra::Client.new(@params[:username], @params[:apikey])
         invoice = client.invoices.send_by_email(1, _params)
         expect(invoice.class).to eq Hash
-        expect(invoice).to include({code: "200", message: "La factura fue enviada exitosamente"})
+        expect(invoice).to include(code: '200', message: 'La factura fue enviada exitosamente')
       end
     end
 

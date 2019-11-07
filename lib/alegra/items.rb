@@ -6,7 +6,7 @@ module Alegra
       @client = client
     end
 
-    # @param id [ Interger ]
+    # @param id [ Integer ]
     # @return [ Hash ]
     def find(id)
       client.get("items/#{ id }")

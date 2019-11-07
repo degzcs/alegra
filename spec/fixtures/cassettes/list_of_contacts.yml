@@ -69,6 +69,6 @@ http_interactions:
       string: '[{"id":"1","name":"cliente","identification":"123456789","email":"cliente@test.com","phonePrimary":"","phoneSecondary":"","fax":"","mobile":"3004232123","observations":"Este
         es un usuario de prueba","address":{"address":"calle 1 # 3-2","city":"Medellin"},"type":["client","provider"],"seller":null,"term":{"id":"1","name":"De
         contado","days":"0"},"priceList":{"id":"1","name":"General"},"internalContacts":[]}]'
-    http_version: 
+    http_version:
   recorded_at: Fri, 14 Oct 2016 15:09:02 GMT
 recorded_with: VCR 3.0.3

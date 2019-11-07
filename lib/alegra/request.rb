@@ -9,29 +9,31 @@ module Alegra
       @session = Faraday.new url: host
     end
 
-    def get(url, params={})
-        params = JSON.generate(params)
-        response = @session.get do |req|
-          req.url "#{ @path }#{ url }"
-          req.headers['Content-Type'] = 'application/json'
-          req.headers['Accept'] = 'application/json'
-          req.headers['Authorization'] = "Basic #{ @token }"
-        end
-        cast_error(response) unless (response.status == 200 || response.status == 201)
-        return Alegra::Response.new(response.body).call
+    def get(url, params = {})
+      params = URI.encode_www_form(params)
+
+      response = @session.get do |req|
+        req.url "#{@path}#{url}?#{params}"
+        req.headers['Content-Type'] = 'application/json'
+        req.headers['Accept'] = 'application/json'
+        req.headers['Authorization'] = "Basic #{@token}"
+      end
+
+      cast_error(response) unless response.status == 200 || response.status == 201
+      Alegra::Response.new(response.body).call
     end
 
-    def post(url, params={})
-        params = JSON.generate(params)
-        response = @session.post do |req|
-          req.url "#{ @path }#{ url }"
-          req.headers['Content-Type'] = 'application/json'
-          req.headers['Accept'] = 'application/json'
-          req.headers['Authorization'] = "Basic #{ @token }"
-          req.body = params
-        end
-        cast_error(response) unless (response.status == 200 || response.status == 201)
-        return Alegra::Response.new(response.body).call
+    def post(url, params = {})
+      params = JSON.generate(params)
+      response = @session.post do |req|
+        req.url "#{ @path }#{ url }"
+        req.headers['Content-Type'] = 'application/json'
+        req.headers['Accept'] = 'application/json'
+        req.headers['Authorization'] = "Basic #{ @token }"
+        req.body = params
+      end
+      cast_error(response) unless (response.status == 200 || response.status == 201)
+      return Alegra::Response.new(response.body).call
     end
 
     def put(url, params={})

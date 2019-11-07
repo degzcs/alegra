@@ -3,6 +3,7 @@ require 'alegra/request'
 require 'alegra/invoices'
 require 'alegra/contacts'
 require 'alegra/items'
+require 'alegra/payments'
 
 module Alegra
   class Client
@@ -10,12 +11,12 @@ module Alegra
       @setup = Alegra::Setup.new(username, apikey, debug)
     end
 
-    def get(url, params={})
+    def get(url, params = {})
       request = Alegra::Request.new(@setup.host, @setup.path, @setup.token)
       request.get(url, params)
     end
 
-    def post(url, params={})
+    def post(url, params = {})
       request = Alegra::Request.new(@setup.host, @setup.path, @setup.token)
       request.post(url, params)
     end
@@ -30,16 +31,20 @@ module Alegra
       request.delete(url, params)
     end
 
-    def invoices
-      Alegra::Invoices.new(self)
-    end
-
     def contacts
       Alegra::Contacts.new(self)
     end
 
+    def invoices
+      Alegra::Invoices.new(self)
+    end
+
     def items
       Alegra::Items.new(self)
+    end
+
+    def payments
+      Alegra::Payments.new(self)
     end
   end
 end

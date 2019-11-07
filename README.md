@@ -158,11 +158,44 @@ Send that invoice by email:
 params = { emails: ['your.email@alegra.com', 'another.eail@algra.com'], send_copy_to_user: true, invoice_type: 'copy'}
 client.invoices.send_by_email(1, params)
 ```
+
+### Payments
+
+You can get all payments:
+```ruby
+client.payments.list()
+```
+
+Or get a specific payment by id:
+```ruby
+client.payments.find(1) # the parameter is the payment id
+```
+
+Also you are able to create a new payments, as follows:
+```ruby
+params = {
+  date: "2015-12-13",
+  invoices: [
+    {
+      id: 6,
+      amount: 150
+    },
+    {
+      id: 200,
+      amount: 500
+    }
+  ],
+  bank_account: 1
+}
+
+client.payments.create(params)
+```
+
 ## Development
 
 This gem is under construction and I'm writing it with the goal that it will easy to use. However, if you have any recommendation is well received.
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
@@ -178,6 +211,10 @@ The next endpoints are pending:
 - Retentions
 - Categories
 - Sellers
+- payments
+  - cancel payment(void)
+  - open payment convert  https://developer.alegra.com/docs/convertir-pago-a-abierto
+  - Add attachment https://developer.alegra.com/docs/adjuntar-archivos-a-pagos
 
 ## License
 
@@ -186,4 +223,4 @@ The gem is available as open source under the terms of the [MIT License](http://
 ## Contributors
 
 - Diego Gomez
-
+- Nicolas Mena

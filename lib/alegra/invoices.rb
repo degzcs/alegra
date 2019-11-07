@@ -6,16 +6,29 @@ module Alegra
       @client = client
     end
 
-    # @param id [ Interger ]
+    # @param id [ Integer ]
     # @return [ Hash ]
     def find(id)
-      client.get("invoices/#{ id }")
+      client.get("invoices/#{id}")
     end
 
     # Returs all invoices
+    # @param params [ Hash ]
+    #   - start [ Integer ]
+    #   - limit [ Integer ]
+    #   - order_direction [ String ]
+    #   - order_field [ string ]
+    #   - metadata [ Boolean ]
+    #   - id [ Integer ]
+    #   - date [ String  ]
+    #   - due_date [ String ]
+    #   - status [ String ]
+    #   - client_name [ String ]
+    #   - client_identification [ String ]
+    #   - number_template_full_number
     # @return [ Array ]
-    def list()
-      client.get('invoices')
+    def list(params = {})
+      client.get('invoices', params)
     end
 
     # Creates a invoice
@@ -36,8 +49,8 @@ module Alegra
     #   - seller [ String ]
     # @return [ Hash ]
     def create(params)
-      _params = params.deep_camel_case_lower_keys
-      client.post('invoices', _params)
+      sanitize_params = params.deep_camel_case_lower_keys
+      client.post('invoices', sanitize_params)
     end
 
     # Creates a invoice
@@ -58,8 +71,8 @@ module Alegra
     #   - seller [ String ]
     # @return [ Hash ]
     def update(id, params)
-      _params = params.deep_camel_case_lower_keys
-      client.put("invoices/#{ id }", _params)
+      sanitize_params = params.deep_camel_case_lower_keys
+      client.put("invoices/#{id}", sanitize_params)
     end
 
     # @param id [ Integer ]
@@ -69,8 +82,8 @@ module Alegra
     #  - invoiceType [ String ]
     # @return [ Hash ]
     def send_by_email(id, params)
-      _params = params.deep_camel_case_lower_keys
-      client.post("invoices/#{ id }/email", _params)
+      sanitize_params = params.deep_camel_case_lower_keys
+      client.post("invoices/#{id}/email", sanitize_params)
     end
   end
 end
