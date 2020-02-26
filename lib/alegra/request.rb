@@ -9,7 +9,7 @@ module Alegra
       @session = Faraday.new url: host
     end
 
-    def get(url, params = {})
+    def get(url, params = {}, options = { format: :formated })
       params = URI.encode_www_form(params)
 
       response = @session.get do |req|
@@ -18,12 +18,10 @@ module Alegra
         req.headers['Accept'] = 'application/json'
         req.headers['Authorization'] = "Basic #{@token}"
       end
-
-      cast_error(response) unless response.status == 200 || response.status == 201
-      Alegra::Response.new(response.body).call
+      response_of_request(response, options)
     end
 
-    def post(url, params = {})
+    def post(url, params = {}, options = { format: :formated })
       params = JSON.generate(params)
       response = @session.post do |req|
         req.url "#{ @path }#{ url }"
@@ -32,11 +30,10 @@ module Alegra
         req.headers['Authorization'] = "Basic #{ @token }"
         req.body = params
       end
-      cast_error(response) unless (response.status == 200 || response.status == 201)
-      return Alegra::Response.new(response.body).call
+      response_of_request(response, options)
     end
 
-    def put(url, params={})
+    def put(url, params={}, options = { format: :formated })
       params = JSON.generate(params)
       response = @session.put do |req|
         req.url "#{ @path }#{ url }"
@@ -45,12 +42,10 @@ module Alegra
         req.headers['Authorization'] = "Basic #{ @token }"
         req.body = params
       end
-      cast_error(response) unless (response.status == 200 || response.status == 201)
-      return Alegra::Response.new(response.body).call
+      response_of_request(response, options)
     end
 
-
-    def delete(url, params={})
+    def delete(url, params={}, options = { format: :formated })
       params = JSON.generate(params)
       response = @session.delete do |req|
         req.url "#{ @path }#{ url }"
@@ -59,12 +54,28 @@ module Alegra
         req.headers['Authorization'] = "Basic #{ @token }"
         req.body = params
       end
-      cast_error(response) unless (response.status == 200 || response.status == 201)
-      return Alegra::Response.new(response.body).call
+      response_of_request(response, options)
     end
 
-    def cast_error(response)
+    private
+
+    def response_of_request(response, options = { format: :formated })
+      cast_error(response, options) unless response.status == 200 || response.status == 201
+
+      raise_invalid_format options[:format]
+
+      return response if options[:format] == :raw
+
+      Alegra::Response.new(response.body).call
+    end
+
+    def cast_error(response, options = { format: :formated })
+      raise_invalid_format options[:format]
+
+      return response if options[:format] == :raw
+
       message = response.body.empty? ? response.body : Alegra::Response.new(response.body).call['message']
+
       error_map = {
         500 => 'Sever error! Something were wrong in the server.',
         400 => "Bad request!, #{ message }",
@@ -75,6 +86,13 @@ module Alegra
         405 => 'Operation does not allowed!',
       }
       raise StandardError, "Status: #{ response.status }. Error: #{ error_map[response.status] }"
+    end
+
+    def raise_invalid_format(format)
+      return if %i[formated raw].include?(format)
+      return if format.nil?
+
+      raise StandardError, "#{format} is not a valid format, valid_formats[:formated, :raw]"
     end
   end
 end

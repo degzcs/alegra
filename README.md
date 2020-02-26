@@ -190,6 +190,78 @@ params = {
 
 client.payments.create(params)
 ```
+### Company
+
+You can get the company:
+```ruby
+client.company.find
+```
+
+Also you can update it, as follows:
+```ruby
+params = { website: 'nominapp.com' }
+
+client.company.update(params)
+```
+
+### Users
+
+You can get the users:
+```ruby
+client.users.list
+```
+
+Also you can retrive a specific user by doing:
+```ruby
+client.users.find(1)
+```
+
+Lastly you can retrive the current user, as follows:
+```ruby
+client.users.find_current
+```
+
+### Categories
+
+You can get all the categories on the client account like this:
+```ruby
+client.categories.list #this will retrieve the tree format by default
+```
+Or if you prefer the plain format from the Alegra API just pass it as a paramater:
+```ruby
+client.categories.list(format: 'plain')
+```
+You can also retrive a specific category, as follows:
+```ruby
+client.categories.find('5047')
+```
+
+### BankAccounts
+
+To retrive all bank accounts:
+```ruby
+client.bank_accounts.list
+```
+Or get a specific bank_account by id:
+```ruby
+client.bank_accounts.find(2)
+```
+Also you are able to create a new bank accounts, as follows:
+```ruby
+params = { name: 'test',
+           type: 'bank',
+           initial_balance: '100000',
+           initial_balance_date: '2020-02-25' }
+
+client.bank_accounts.create(params)
+```
+And to create a bank transfer between accounts:
+```ruby
+params = { id_destination: 4, # 4 is the destination bank_account_id
+           amount: 100000,
+           date: '2020-02-25' }
+client.bank_accounts.transfer(7, params) # 7 is the origin bank_account_id
+```
 
 ## Development
 

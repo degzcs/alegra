@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.alegra.com/api/v1/bank-accounts/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic ZWplbXBsb2FwaUBkYXlyZXAuY29tOjA2NmIzYWIwOWU3MmQ0NTQ4ZTg4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 26 Feb 2020 00:51:03 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Set-Cookie:
+      - PHPSESSID=cn1fmmb9d5ccpc1rtkp9p2b207; expires=Fri, 25-Feb-2022 00:51:03 GMT;
+        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-cache
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
+        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-1
+      Access-Control-Allow-Methods:
+      - DELETE
+      - PUT
+      X-Rate-Limit-Limit:
+      - '150'
+      X-Rate-Limit-Reset:
+      - '59'
+      X-Rate-Limit-Remaining:
+      - '148'
+    body:
+      encoding: UTF-8
+      string: '{"id":"2","name":"Banco 1","number":null,"description":"","type":"bank","status":"active"}'
+    http_version: null
+  recorded_at: Wed, 26 Feb 2020 00:51:03 GMT
+recorded_with: VCR 5.1.0

@@ -1,11 +1,5 @@
 module Alegra
-  class Invoices
-    attr_reader :client
-
-    def initialize(client)
-      @client = client
-    end
-
+  class Invoices < Alegra::Record
     # @param id [ Integer ]
     # @return [ Hash ]
     def find(id)

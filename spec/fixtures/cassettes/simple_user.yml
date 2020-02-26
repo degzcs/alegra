@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.alegra.com/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic ZWplbXBsb2FwaUBkYXlyZXAuY29tOjA2NmIzYWIwOWU3MmQ0NTQ4ZTg4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 25 Feb 2020 23:55:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Set-Cookie:
+      - PHPSESSID=7ltja0o2j2d8oru9tbmems42s4; expires=Thu, 24-Feb-2022 23:55:49 GMT;
+        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-cache
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
+        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-1
+      Access-Control-Allow-Methods:
+      - DELETE
+      - PUT
+      X-Rate-Limit-Limit:
+      - '150'
+      X-Rate-Limit-Reset:
+      - "-2"
+      X-Rate-Limit-Remaining:
+      - '149'
+    body:
+      encoding: UTF-8
+      string: '{"name":null,"lastName":null,"email":"ejemploapi@dayrep.com","role":"admin","status":"active","id":"1","permissions":{"bank-accounts":{"add":"allow","transfer":"allow","view":"allow"},"bills":{"add":"allow","delete":"allow","edit":"allow","view":"allow"},"categories":{"view":"allow"},"contacts":{"add":"allow","delete":"allow","edit":"allow","view":"allow"},"company":{"edit":"allow","retrieve-info":"allow"},"invoices":{"add":"allow","edit":"allow","email":"allow","view":"allow","void":"allow","edit-items-prices":"allow"},"items":{"add":"allow","delete":"allow","edit":"allow","view":"allow"},"retentions":{"view":"allow"},"taxes":{"view":"allow"},"terms":{"view":"allow"},"payments":{"add":"allow","edit":"allow","view":"allow","edit-in":"allow","edit-out":"allow","retrieve-in":"allow","viewin":"allow","viewout":"allow"},"price-lists":{"view":"allow"},"remissions":{"add":"allow","edit":"allow","delete":"allow","view":"allow"},"estimates":{"add":"allow","delete":"allow","view":"allow","edit":"allow"},"currencies":{"index":"allow"},"sellers":{"add":"allow","edit":"allow"},"pos-cashier":{"close":"allow","index":"allow","open":"allow","view":"allow"},"pos-station":{"add":"allow","edit":"allow","view":"allow","index":"allow","delete":"allow"}}}'
+    http_version: null
+  recorded_at: Tue, 25 Feb 2020 23:55:49 GMT
+recorded_with: VCR 5.1.0
