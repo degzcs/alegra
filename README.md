@@ -263,6 +263,41 @@ params = { id_destination: 4, # 4 is the destination bank_account_id
 client.bank_accounts.transfer(7, params) # 7 is the origin bank_account_id
 ```
 
+### Journals
+
+To retrive all existing journals:
+```ruby
+client.journals.list
+```
+Or get a specif journal by `:id`:
+```ruby
+client.journals.find(191)
+```
+You can create journals too, as follows:
+```ruby
+params = { date: Date.today.strftime("%Y-%m-%d"),
+           client: '416',
+           entries: [{ id: '5009', debit: 3_000_000 },
+                     { id: '5048', credit: 4_250_660 },
+                     { id: '5008', debit: 755_000 },
+                     { id: '5010', debit: 495_660 }] }
+
+client.journals.create(params)
+```
+Or update them like this:
+```ruby
+params = { client: '416'
+           entries: [{ id: '5009', debit: 3_000_000 },
+                     { id: '5048', credit: 4_150_660 },
+                     { id: '5008', debit: 655_000 },
+                     { id: '5010', debit: 495_660 }] }
+
+client.journals.update(193, params) # Where 193 is the :id of the journal in Alegra
+```
+Lastly you can delete journals, by doing the following:
+```ruby
+client.journals.delete(193, params) # Where 193 is the :id of the journal in Alegra
+```
 ## Development
 
 This gem is under construction and I'm writing it with the goal that it will easy to use. However, if you have any recommendation is well received.
@@ -281,7 +316,6 @@ The next endpoints are pending:
 - Estimates
 - Number templates
 - Retentions
-- Categories
 - Sellers
 - payments
   - cancel payment(void)
@@ -291,8 +325,3 @@ The next endpoints are pending:
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
-## Contributors
-
-- Diego Gomez
-- Nicolas Mena

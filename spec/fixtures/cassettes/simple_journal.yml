@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.alegra.com/api/v1/journals/191
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic aW5mb0BxdWluY2VuYS5tZTo2ZTZhOGVkODhkOGNhMmIyN2MyMg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Mar 2020 14:46:50 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Set-Cookie:
+      - PHPSESSID=16huepfgdjn7fbbtsq6qlp2i70; expires=Sat, 05-Mar-2022 14:46:50 GMT;
+        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-cache
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
+        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-2
+      Access-Control-Allow-Methods:
+      - DELETE
+      - PUT
+      X-Rate-Limit-Limit:
+      - '150'
+      X-Rate-Limit-Reset:
+      - "-2"
+      X-Rate-Limit-Remaining:
+      - '149'
+    body:
+      encoding: UTF-8
+      string: '{"id":"191","entries":[{"id":"5009","client":{"id":"416","name":"Rodrigo
+        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[]},"name":"Salarios","description":null,"debit":3000000,"credit":0},{"id":"5048","client":{"id":"416","name":"Rodrigo
+        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[]},"name":"Obligaciones
+        financieras y pr\u00e9stamos a terceros","description":null,"debit":0,"credit":4250660},{"id":"5008","client":{"id":"416","name":"Rodrigo
+        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[]},"name":"Prestaciones
+        sociales","description":null,"debit":755000,"credit":0},{"id":"5010","client":{"id":"416","name":"Rodrigo
+        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[]},"name":"Seguridad
+        social y parafiscales","description":null,"debit":495660,"credit":0}],"client":{"id":"416","name":"Rodrigo
+        Rodr\u00edguez","identification":"315474402","email":null,"phonePrimary":null,"phoneSecondary":null,"fax":null,"mobile":null,"observations":null,"kindOfPerson":"PERSON_ENTITY","regime":"","nameObject":{"firstName":"Rodrigo","lastName":"Rodr\u00edguez"},"identificationObject":{"type":"CC","number":"315474402"},"address":{"address":null,"city":null,"department":null,"country":null,"zipCode":null},"type":["provider"],"seller":null,"term":null,"priceList":null,"internalContacts":[]},"date":"2020-03-31","observations":null,"reference":null,"status":"open","total":4250660}'
+    http_version: null
+  recorded_at: Thu, 05 Mar 2020 14:46:50 GMT
+recorded_with: VCR 5.1.0

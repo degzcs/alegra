@@ -6,7 +6,7 @@ describe Alegra::Categories do
   context 'Categories' do
     before :each do
       @params = {
-        username: 'ejemploapi@dayrep.com',
+        username: 'ejemplo@ejemplo.com',
         apikey: '066b3ab09e72d4548e88'
       }
       @client = Alegra::Client.new(@params[:username], @params[:apikey])

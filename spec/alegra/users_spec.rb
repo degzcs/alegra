@@ -6,7 +6,7 @@ describe Alegra::Users do
   context 'User' do
     before :each do
       @params = {
-        username: 'ejemploapi@dayrep.com',
+        username: 'ejemplo@ejemplo.com',
         apikey: '066b3ab09e72d4548e88'
       }
       @client = Alegra::Client.new(@params[:username], @params[:apikey])
@@ -16,7 +16,7 @@ describe Alegra::Users do
       VCR.use_cassette('users') do
         expected_response = [
           {
-            email: 'ejemploapi@dayrep.com',
+            email: 'ejemplo@ejemplo.com',
             id: '1',
             last_name: nil,
             name: nil,
@@ -83,7 +83,7 @@ describe Alegra::Users do
 
     it 'should return user with specific :id' do
       VCR.use_cassette('simple_user') do
-        expected_response = { email: 'ejemploapi@dayrep.com',
+        expected_response = { email: 'ejemplo@ejemplo.com',
                               id: '1',
                               last_name: nil,
                               name: nil,
@@ -148,7 +148,7 @@ describe Alegra::Users do
 
     it 'should return current user' do
       VCR.use_cassette('self_user') do
-        expected_response = { email: 'ejemploapi@dayrep.com',
+        expected_response = { email: 'ejemplo@ejemplo.com',
                               id: '1',
                               last_name: nil,
                               name: nil,

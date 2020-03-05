@@ -6,7 +6,7 @@ describe Alegra::Invoices do
   context 'Invoices' do
     before :each do
       @params = {
-        username: 'ejemploapi@dayrep.com',
+        username: 'ejemplo@ejemplo.com',
         apikey: '066b3ab09e72d4548e88'
       }
     end

@@ -1,0 +1,213 @@
+{
+   "id": "191",
+   "entries": [
+      {
+         "id": "5009",
+         "client": {
+            "id": "416",
+            "name": "Rodrigo Rodríguez",
+            "identification": "315474402",
+            "email": null,
+            "phone_primary": null,
+            "phone_secondary": null,
+            "fax": null,
+            "mobile": null,
+            "observations": null,
+            "kind_of_person": "PERSON_ENTITY",
+            "regime": "",
+            "name_object": {
+               "first_name": "Rodrigo",
+               "last_name": "Rodríguez"
+            },
+            "identification_object": {
+               "type": "CC",
+               "number": "315474402"
+            },
+            "address": {
+               "address": null,
+               "city": null,
+               "department": null,
+               "country": null,
+               "zip_code": null
+            },
+            "type": [
+               "provider"
+            ],
+            "seller": null,
+            "term": null,
+            "price_list": null,
+            "internal_contacts": []
+         },
+         "name": "Salarios",
+         "description": null,
+         "debit": 3000000,
+         "credit": 0
+      },
+      {
+         "id": "5048",
+         "client": {
+            "id": "416",
+            "name": "Rodrigo Rodríguez",
+            "identification": "315474402",
+            "email": null,
+            "phone_primary": null,
+            "phone_secondary": null,
+            "fax": null,
+            "mobile": null,
+            "observations": null,
+            "kind_of_person": "PERSON_ENTITY",
+            "regime": "",
+            "name_object": {
+               "first_name": "Rodrigo",
+               "last_name": "Rodríguez"
+            },
+            "identification_object": {
+               "type": "CC",
+               "number": "315474402"
+            },
+            "address": {
+               "address": null,
+               "city": null,
+               "department": null,
+               "country": null,
+               "zip_code": null
+            },
+            "type": [
+               "provider"
+            ],
+            "seller": null,
+            "term": null,
+            "price_list": null,
+            "internal_contacts": []
+         },
+         "name": "Obligaciones financieras y préstamos a terceros",
+         "description": null,
+         "debit": 0,
+         "credit": 4250660
+      },
+      {
+         "id": "5008",
+         "client": {
+            "id": "416",
+            "name": "Rodrigo Rodríguez",
+            "identification": "315474402",
+            "email": null,
+            "phone_primary": null,
+            "phone_secondary": null,
+            "fax": null,
+            "mobile": null,
+            "observations": null,
+            "kind_of_person": "PERSON_ENTITY",
+            "regime": "",
+            "name_object": {
+               "first_name": "Rodrigo",
+               "last_name": "Rodríguez"
+            },
+            "identification_object": {
+               "type": "CC",
+               "number": "315474402"
+            },
+            "address": {
+               "address": null,
+               "city": null,
+               "department": null,
+               "country": null,
+               "zip_code": null
+            },
+            "type": [
+               "provider"
+            ],
+            "seller": null,
+            "term": null,
+            "price_list": null,
+            "internal_contacts": []
+         },
+         "name": "Prestaciones sociales",
+         "description": null,
+         "debit": 755000,
+         "credit": 0
+      },
+      {
+         "id": "5010",
+         "client": {
+            "id": "416",
+            "name": "Rodrigo Rodríguez",
+            "identification": "315474402",
+            "email": null,
+            "phone_primary": null,
+            "phone_secondary": null,
+            "fax": null,
+            "mobile": null,
+            "observations": null,
+            "kind_of_person": "PERSON_ENTITY",
+            "regime": "",
+            "name_object": {
+               "first_name": "Rodrigo",
+               "last_name": "Rodríguez"
+            },
+            "identification_object": {
+               "type": "CC",
+               "number": "315474402"
+            },
+            "address": {
+               "address": null,
+               "city": null,
+               "department": null,
+               "country": null,
+               "zip_code": null
+            },
+            "type": [
+               "provider"
+            ],
+            "seller": null,
+            "term": null,
+            "price_list": null,
+            "internal_contacts": []
+         },
+         "name": "Seguridad social y parafiscales",
+         "description": null,
+         "debit": 495660,
+         "credit": 0
+      }
+   ],
+   "client": {
+      "id": "416",
+      "name": "Rodrigo Rodríguez",
+      "identification": "315474402",
+      "email": null,
+      "phone_primary": null,
+      "phone_secondary": null,
+      "fax": null,
+      "mobile": null,
+      "observations": null,
+      "kind_of_person": "PERSON_ENTITY",
+      "regime": "",
+      "name_object": {
+         "first_name": "Rodrigo",
+         "last_name": "Rodríguez"
+      },
+      "identification_object": {
+         "type": "CC",
+         "number": "315474402"
+      },
+      "address": {
+         "address": null,
+         "city": null,
+         "department": null,
+         "country": null,
+         "zip_code": null
+      },
+      "type": [
+         "provider"
+      ],
+      "seller": null,
+      "term": null,
+      "price_list": null,
+      "internal_contacts": []
+   },
+   "date": "2020-03-31",
+   "observations": null,
+   "reference": null,
+   "status": "open",
+   "total": 4250660
+}

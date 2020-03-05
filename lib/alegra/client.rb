@@ -9,6 +9,7 @@ require 'alegra/company'
 require 'alegra/users'
 require 'alegra/categories'
 require 'alegra/bank_accounts'
+require 'alegra/journals'
 
 module Alegra
   class Client
@@ -66,6 +67,10 @@ module Alegra
 
     def bank_accounts
       Alegra::BankAccounts.new(self)
+    end
+
+    def journals
+      Alegra::Journals.new(self)
     end
   end
 end
