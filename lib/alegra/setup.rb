@@ -38,7 +38,7 @@ module Alegra
     end
 
     def create_token!
-      @token = ::Base64.encode64("#{@username}:#{@apikey}")
+      @token = ::Base64.strict_encode64("#{@username}:#{@apikey}")
     end
   end
 end
