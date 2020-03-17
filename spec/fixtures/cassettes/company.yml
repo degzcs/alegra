@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.alegra.com/api/v1/company
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic ZWplbXBsb2FwaUBkYXlyZXAuY29tOjA2NmIzYWIwOWU3MmQ0NTQ4ZTg4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 25 Feb 2020 15:19:35 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
+        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-1
+      Access-Control-Allow-Methods:
+      - DELETE
+      - GET
+      - PUT
+      X-Rate-Limit-Limit:
+      - '150'
+      X-Rate-Limit-Reset:
+      - "-2"
+      X-Rate-Limit-Remaining:
+      - '149'
+    body:
+      encoding: UTF-8
+      string: '{"name":"ejemploapi@legra","identification":"1061687132-1","phone":"5167770","website":"test.com","email":"test@test.com","regime":"Responsable
+        del IVA","applicationVersion":"colombia","registryDate":"2016-10-12 09:48:45","timezone":"America\/Bogota","profile":null,"address":{"city":"Medellin","department":null,"address":"calle
+        falsa 123","zipCode":null},"currency":{"code":"COP","symbol":"$"},"multicurrency":false,"decimalPrecision":"0","invoicePreferences":{"defaultAnotation":null,"defaultTermsAndConditions":"Esta
+        factura se asimila en todos sus efectos a una letra de cambio de conformidad
+        con el Art. 774 del c\u00f3digo de comercio. Autorizo que en caso de incumplimiento
+        de esta obligaci\u00f3n sea reportado a las centrales de riesgo, se cobraran
+        intereses por mora."},"logo":"https:\/\/d3r8o2i8390sjv.cloudfront.net\/application\/production\/company-logos\/48302296106c20092d3279f24","kindOfPerson":"","identificationObject":{"type":null,"number":"1061687132-1"},"settings":{"canStampInvoices":false,"electronicInvoicing":false}}'
+    http_version: null
+  recorded_at: Tue, 25 Feb 2020 15:19:35 GMT
+recorded_with: VCR 5.1.0

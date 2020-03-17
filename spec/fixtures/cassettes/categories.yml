@@ -1,0 +1,211 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.alegra.com/api/v1/categories?format=plain
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic ZWplbXBsb2FwaUBkYXlyZXAuY29tOjA2NmIzYWIwOWU3MmQ0NTQ4ZTg4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 26 Feb 2020 00:21:12 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Set-Cookie:
+      - PHPSESSID=1d5lgob60j79tvdsfa23me8ai6; expires=Fri, 25-Feb-2022 00:21:12 GMT;
+        Max-Age=63072000; path=/; domain=.alegra.com; secure; HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-cache
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization, X-Authorization, Origin, Accept, Content-Type, X-Requested-With,
+        X-HTTP-Method-Override, X-Data-Source, X-Experiment-Onb-1
+      Access-Control-Allow-Methods:
+      - DELETE
+      - PUT
+      X-Rate-Limit-Limit:
+      - '150'
+      X-Rate-Limit-Reset:
+      - "-2"
+      X-Rate-Limit-Remaining:
+      - '149'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"5001","idParent":"5026","name":"Inversiones","description":"","type":"asset","readOnly":false,"categoryRule":null},{"id":"5002","idParent":"5026","name":"Pr\u00e9stamos
+        a terceros","description":"","type":"asset","readOnly":false,"categoryRule":null},{"id":"5003","idParent":"5073","name":"Alquiler
+        de equipos y licencias","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5004","idParent":"5073","name":"Comisiones
+        y honorarios","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5005","idParent":"5073","name":"Transporte
+        y mensajer\u00eda","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5006","idParent":"5073","name":"Legales","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5007","idParent":"5073","name":"N\u00f3mina","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5008","idParent":"5007","name":"Prestaciones
+        sociales","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5009","idParent":"5007","name":"Salarios","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5010","idParent":"5007","name":"Seguridad
+        social y parafiscales","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5011","idParent":"5007","name":"Dotaci\u00f3n","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5012","idParent":"5073","name":"Publicidad","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5013","idParent":"5073","name":"Seguros
+        y seguridad","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5014","idParent":"5073","name":"Servicios
+        bancarios","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5015","idParent":"5073","name":"Suscripciones
+        y afiliaciones","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5016","idParent":"5073","name":"Varios","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5017","idParent":"5073","name":"Mantenimiento
+        e instalaciones","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5018","idParent":"5073","name":"Viajes
+        y vi\u00e1ticos","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5019","idParent":"5074","name":"Flete
+        y env\u00edos","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5020","idParent":"5074","name":"Mano
+        de obra","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5021","idParent":"5081","name":"Arrendamiento","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5022","idParent":"5081","name":"Internet
+        y telecomunicaciones","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5023","idParent":"5081","name":"Aseo
+        y cafeter\u00eda","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5024","idParent":"5081","name":"Papeler\u00eda","description":"","type":"expense","readOnly":false,"categoryRule":null},{"id":"5025","idParent":"5062","name":"Capital
+        accionistas","description":"","type":"equity","readOnly":false,"categoryRule":null},{"id":"5026","idParent":null,"name":"Activos","description":"Bajo
+        esta categor\u00eda se encuentran los activos que tiene la empresa","type":"asset","readOnly":false,"categoryRule":{"id":"1","name":"Activos","key":"ASSETS"}},{"id":"5027","idParent":"5026","name":"Activos
+        fijos","description":"Bajo esta categor\u00eda se ubican los activos principales
+        de la empresa","type":"asset","readOnly":false,"categoryRule":{"id":"2","name":"Activos
+        fijos","key":"FIXED_ASSET"}},{"id":"5028","idParent":"5026","name":"Retenciones
+        a favor","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"3","name":"Retenciones
+        a favor","key":"RETENTIONS_IN_FAVOR"}},{"id":"5029","idParent":"5028","name":"Retenci\u00f3n
+        en la fuente a favor","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"41","name":"Retenci\u00f3n
+        en la fuente a favor","key":"FUENTE_RETENTION_IN_FAVOR_COL"}},{"id":"5030","idParent":"5028","name":"Retenci\u00f3n
+        de Industria y Comercio a favor","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"42","name":"Retenci\u00f3n
+        de Industria y Comercio a favor","key":"INDUSTRY_RETENTION_IN_FAVOR_COL"}},{"id":"5031","idParent":"5028","name":"Retenci\u00f3n
+        de IVA a favor","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"43","name":"Retenci\u00f3n
+        de IVA a favor","key":"IVA_RETENTION_IN_FAVOR_COL"}},{"id":"5032","idParent":"5028","name":"Retenci\u00f3n
+        de CREE a favor","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"45","name":"Retenci\u00f3n
+        de CREE a favor","key":"CREE_RETENTION_IN_FAVOR_COL"}},{"id":"5033","idParent":"5028","name":"Otro
+        tipo de retenci\u00f3n a favor","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"108","name":"Otro
+        tipo de retenci\u00f3n a favor","key":"OTHER_RETENTION_TYPE_IN_FAVOR"}},{"id":"5034","idParent":"5026","name":"Impuestos
+        a favor","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"4","name":"Impuestos
+        a favor","key":"TAXES_IN_FAVOR"}},{"id":"5035","idParent":"5034","name":"IVA
+        a favor","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"44","name":"IVA
+        a favor","key":"IVA_IN_FAVOR_COL"}},{"id":"5036","idParent":"5034","name":"ICO
+        a favor","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"46","name":"ICO
+        a favor","key":"ICO_IN_FAVOR_COL"}},{"id":"5037","idParent":"5034","name":"Otro
+        tipo de impuesto a favor","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"106","name":"Otro
+        tipo de impuesto a favor","key":"OTHER_TAX_TYPE_IN_FAVOR"}},{"id":"5038","idParent":"5026","name":"Activo
+        corriente","description":null,"type":"asset","readOnly":false,"categoryRule":null},{"id":"5039","idParent":"5038","name":"Cuentas
+        por cobrar","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"5","name":"Cuentas
+        por cobrar","key":"RECEIVABLE_ACCOUNTS"}},{"id":"5040","idParent":"5038","name":"Bancos","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"6","name":"Bancos","key":"BANKS"}},{"id":"5041","idParent":"5040","name":"Cuentas
+        bancarias","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"85","name":"Bancos
+        tipo banco","key":"BANK_ACCOUNTS"}},{"id":"5042","idParent":"5040","name":"Efectivo","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"86","name":"Bancos
+        tipo efectivo","key":"CASH_ACCOUNTS"}},{"id":"5043","idParent":"5038","name":"Inventario","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"7","name":"Inventario","key":"INVENTORY"}},{"id":"5044","idParent":"5026","name":"Cuentas
+        por cobrar - devoluciones","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"8","name":"Cuentas
+        por cobrar - devoluciones","key":"RECEIVABLE_ACCOUNTS_RETURNS"}},{"id":"5045","idParent":"5026","name":"Avances
+        y anticipos entregados","description":null,"type":"asset","readOnly":false,"categoryRule":{"id":"9","name":"Avances
+        y anticipos entregados","key":"ADVANCE_OUT"}},{"id":"5046","idParent":null,"name":"Pasivos","description":"Bajo
+        esta categor\u00eda se encuentran los pasivos de la empresa","type":"liability","readOnly":false,"categoryRule":{"id":"10","name":"Pasivos","key":"LIABILITIES"}},{"id":"5047","idParent":"5046","name":"Cuentas
+        por pagar - proveedores","description":"Bajo esta categor\u00eda se encuentran
+        los pasivos principales","type":"liability","readOnly":false,"categoryRule":{"id":"11","name":"Cuentas
+        por pagar - proveedores","key":"DEBTS_TO_PAY_PROVIDERS"}},{"id":"5048","idParent":"5046","name":"Obligaciones
+        financieras y pr\u00e9stamos a terceros","description":null,"type":"liability","readOnly":false,"categoryRule":null},{"id":"5049","idParent":"5046","name":"Retenciones
+        por pagar","description":null,"type":"liability","readOnly":false,"categoryRule":{"id":"12","name":"Retenciones
+        por pagar","key":"RETENTIONS_TO_PAY"}},{"id":"5050","idParent":"5049","name":"Retenci\u00f3n
+        en la fuente por pagar","description":null,"type":"liability","readOnly":false,"categoryRule":{"id":"48","name":"Retenci\u00f3n
+        en la fuente por pagar","key":"FUENTE_RETENTION_TO_PAY_COL"}},{"id":"5051","idParent":"5049","name":"Retenci\u00f3n
+        de Industria y Comercio por pagar","description":null,"type":"liability","readOnly":false,"categoryRule":{"id":"49","name":"Retenci\u00f3n
+        de Industria y Comercio por pagar","key":"INDUSTRY_RETENTION_TO_PAY_COL"}},{"id":"5052","idParent":"5049","name":"Retenci\u00f3n
+        de IVA por pagar","description":null,"type":"liability","readOnly":false,"categoryRule":{"id":"50","name":"Retenci\u00f3n
+        de IVA por pagar","key":"IVA_RETENTION_TO_PAY_COL"}},{"id":"5053","idParent":"5049","name":"Retenci\u00f3n
+        de CREE por pagar","description":null,"type":"liability","readOnly":false,"categoryRule":{"id":"52","name":"Retenci\u00f3n
+        de CREE por pagar","key":"CREE_RETENTION_TO_PAY_COL"}},{"id":"5054","idParent":"5049","name":"Otro
+        tipo de retenci\u00f3n por pagar","description":null,"type":"liability","readOnly":false,"categoryRule":{"id":"107","name":"Otro
+        tipo de retenci\u00f3n por pagar","key":"OTHER_RETENTION_TYPE_TO_PAY"}},{"id":"5055","idParent":"5046","name":"Impuestos
+        por pagar","description":null,"type":"liability","readOnly":false,"categoryRule":{"id":"13","name":"Impuestos
+        por pagar","key":"TAXES_TO_PAY"}},{"id":"5056","idParent":"5055","name":"Iva
+        por pagar","description":null,"type":"liability","readOnly":false,"categoryRule":{"id":"47","name":"IVA
+        por pagar","key":"IVA_TO_PAY_COL"}},{"id":"5057","idParent":"5055","name":"ICO
+        por pagar","description":null,"type":"liability","readOnly":false,"categoryRule":{"id":"51","name":"ICO
+        por pagar","key":"ICO_TO_PAY_COL"}},{"id":"5058","idParent":"5055","name":"Otro
+        tipo de impuesto por pagar","description":null,"type":"liability","readOnly":false,"categoryRule":{"id":"105","name":"Otro
+        tipo de impuesto por pagar","key":"OTHER_TAX_TYPE_TO_PAY"}},{"id":"5059","idParent":"5046","name":"Cuentas
+        por pagar - tarjetas de cr\u00e9dito","description":null,"type":"liability","readOnly":false,"categoryRule":{"id":"14","name":"Cuentas
+        por pagar - tarjetas de cr\u00e9dito","key":"DEBTS_TO_PAY_CREDIT_CARDS"}},{"id":"5060","idParent":"5046","name":"Cuentas
+        por pagar - devoluciones","description":null,"type":"liability","readOnly":false,"categoryRule":{"id":"15","name":"Cuentas
+        por pagar - devoluciones","key":"DEBTS_TO_PAY_RETURNS"}},{"id":"5061","idParent":"5046","name":"Avances
+        y anticipos recibidos","description":null,"type":"liability","readOnly":false,"categoryRule":{"id":"16","name":"Avances
+        y anticipos recibidos","key":"ADVANCE_IN"}},{"id":"5062","idParent":null,"name":"Patrimonio","description":"Bajo
+        esta categor\u00eda se encuentra el patrimonio de la empresa","type":"equity","readOnly":false,"categoryRule":{"id":"17","name":"Patrimonio","key":"EQUITY"}},{"id":"5063","idParent":"5062","name":"Utilidades","description":"Bajo
+        esta categor\u00eda se encuentra el patrimonio principal","type":"equity","readOnly":false,"categoryRule":{"id":"18","name":"Utilidades","key":"UTILITIES"}},{"id":"5064","idParent":"5062","name":"Ajustes
+        iniciales - Bancos","description":null,"type":"equity","readOnly":false,"categoryRule":{"id":"19","name":"Ajustes
+        iniciales - Bancos","key":"INITIAL_ADJUSTMENTS_BANKS"}},{"id":"5065","idParent":"5062","name":"Ajustes
+        iniciales - Inventario","description":null,"type":"equity","readOnly":false,"categoryRule":{"id":"20","name":"Ajustes
+        iniciales - Inventario","key":"INITIAL_ADJUSTMENTS_INVENTORY"}},{"id":"5066","idParent":null,"name":"Ingresos","description":"Bajo
+        esta categor\u00eda se encuentran todos los tipos de ingresos.","type":"income","readOnly":false,"categoryRule":{"id":"21","name":"Ingresos","key":"INCOME"}},{"id":"5067","idParent":"5066","name":"Ventas","description":"Bajo
+        Esta categor\u00eda se encuentran todos los ingresos principales.","type":"income","readOnly":false,"categoryRule":{"id":"22","name":"Ventas","key":"SALES"}},{"id":"5068","idParent":"5066","name":"Ingresos
+        no operacionales","description":null,"type":"income","readOnly":false,"categoryRule":{"id":"25","name":"Ingresos
+        no operacionales","key":"NO_OPERATIONAL_INCOME"}},{"id":"5069","idParent":"5068","name":"Otros
+        ingresos","description":"Bajo esta categor\u00eda se encuentran otros tipos
+        de ingresos diferentes a los principales.","type":"income","readOnly":false,"categoryRule":{"id":"23","name":"Otros
+        ingresos","key":"OTHER_EARNINGS"}},{"id":"5070","idParent":"5069","name":"Ingresos
+        por Inter\u00e9s","description":"Ingresos por intereses bancarios","type":"income","readOnly":false,"categoryRule":{"id":"24","name":"Ingresos
+        por inter\u00e9s","key":"INTEREST_INCOME"}},{"id":"5071","idParent":"5066","name":"Devoluciones
+        en ventas","description":null,"type":"income","readOnly":false,"categoryRule":{"id":"26","name":"Devoluciones
+        en ventas","key":"SALES_RETURNS"}},{"id":"5072","idParent":"5066","name":"Ingreso
+        sin identificar","description":null,"type":"income","readOnly":false,"categoryRule":null},{"id":"5073","idParent":null,"name":"Egresos","description":"Bajo
+        esta categor\u00eda se encuentran todos los tipos de egresos.","type":"expense","readOnly":false,"categoryRule":{"id":"27","name":"Egresos","key":"EXPENSES"}},{"id":"5074","idParent":"5073","name":"Costo
+        de la mercanc\u00eda vendida","description":"En esta caetegor\u00eda se guarda
+        el costo de la mercanc\u00eda vendida","type":"expense","readOnly":false,"categoryRule":{"id":"29","name":"Costo
+        de la mercanc\u00eda vendida","key":"COST_OF_MERCHANDISE_SOLD"}},{"id":"5075","idParent":"5074","name":"Materias
+        primas","description":null,"type":"expense","readOnly":false,"categoryRule":null},{"id":"5076","idParent":"5074","name":"Compras
+        inventariables","description":null,"type":"expense","readOnly":true,"categoryRule":{"id":"33","name":"Compras
+        inventariables","key":"INVENTARIABLE_PURCHASES"}},{"id":"5077","idParent":"5074","name":"Ajustes
+        al inventario","description":null,"type":"expense","readOnly":false,"categoryRule":{"id":"36","name":"Ajustes
+        al inventario","key":"INVENTORY_ADJUSTMENTS"}},{"id":"5078","idParent":"5073","name":"Gastos
+        bancarios","description":"Bajo esta categor\u00eda se encuentran los gastos
+        bancarios de la compa\u00f1\u00eda","type":"expense","readOnly":false,"categoryRule":{"id":"28","name":"Gastos
+        bancarios","key":"BANK_EXPENSES"}},{"id":"5079","idParent":"5073","name":"Cuentas
+        incobrables","description":null,"type":"expense","readOnly":false,"categoryRule":{"id":"30","name":"Cuentas
+        incobrables","key":"UNCOLLECTIBLE_ACCOUNTS"}},{"id":"5080","idParent":"5073","name":"Otros
+        impuestos","description":null,"type":"expense","readOnly":false,"categoryRule":{"id":"31","name":"Otros
+        impuestos","key":"OTHER_TAXES"}},{"id":"5081","idParent":"5073","name":"Gastos
+        administrativos","description":null,"type":"expense","readOnly":false,"categoryRule":{"id":"32","name":"Gastos
+        administrativos","key":"ADMIN_EXPENSES"}},{"id":"5082","idParent":"5081","name":"Servicios
+        p\u00fablicos","description":null,"type":"expense","readOnly":false,"categoryRule":null},{"id":"5083","idParent":"5073","name":"Costo
+        servicios vendidos","description":null,"type":"expense","readOnly":false,"categoryRule":{"id":"34","name":"Costo
+        servicios vendidos","key":"SOLD_SERVICES_COST"}},{"id":"5084","idParent":"5073","name":"Egresos
+        no operacionales","description":null,"type":"expense","readOnly":false,"categoryRule":{"id":"35","name":"Egresos
+        no operacionales","key":"NO_OPERATIONAL_EXPENSES"}},{"id":"5085","idParent":"5084","name":"Diferencia
+        en cambio","description":"Bajo esta categor\u00eda se encuentran las p\u00e9rdidas
+        y ganancias por diferencias en tasas de cambio","type":"expense","readOnly":false,"categoryRule":{"id":"38","name":"Diferencia
+        en cambio","key":"EXCHANGE_DIFFERENCE"}},{"id":"5086","idParent":"5084","name":"Descuento
+        financiero","description":null,"type":"expense","readOnly":false,"categoryRule":{"id":"39","name":"Descuento
+        financiero","key":"FINANCIAL_DISCOUNT"}},{"id":"5087","idParent":"5084","name":"Ajustes
+        por aproximaciones en c\u00e1lculos","description":null,"type":"expense","readOnly":false,"categoryRule":{"id":"101","name":"Ajustes
+        por aproximaciones en c\u00e1lculos","key":"CALCULATIONS_APPROX"}},{"id":"5088","idParent":"5073","name":"Devoluciones
+        en compras de \u00edtem","description":null,"type":"expense","readOnly":true,"categoryRule":{"id":"37","name":"Devoluciones
+        en compras de \u00edtem","key":"ITEM_PURCHASES_RETURNS"}},{"id":"5089","idParent":null,"name":"Transferencias
+        bancarias","description":"Bajo esta categor\u00eda se ubican todas las transferencias
+        que se hagan entre bancos de la empresa","type":"other","readOnly":true,"categoryRule":{"id":"40","name":"Transferencias
+        bancarias","key":"BANK_TRANSFERS"}},{"id":"5090","idParent":"5026","name":"Propiedad,
+        planta y equipo (Impuestos descontables)","description":"Bajo esta categor\u00eda
+        se registran los activos de la empresa en los que el impuesto se toma como
+        descontable","type":"asset","readOnly":false,"categoryRule":{"id":"109","name":"Activos
+        fijos descontables","key":"FIXED_ASSET_DEDUCTIBLE"}},{"id":"5091","idParent":"5073","name":"Gastos
+        por impuestos no acreditables","description":"Bajo esta cuenta se registran
+        los movimientos de impuestos configurados como no acreditables","type":"expense","readOnly":false,"categoryRule":{"id":"114","name":"Gastos
+        por impuestos no acreditables","key":"TAX_NOT_DEDUCTIBLE"}}]'
+    http_version: null
+  recorded_at: Wed, 26 Feb 2020 00:21:12 GMT
+recorded_with: VCR 5.1.0

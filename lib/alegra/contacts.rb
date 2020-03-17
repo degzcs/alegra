@@ -1,21 +1,25 @@
 module Alegra
-  class Contacts
-    attr_reader :client
-
-    def initialize(client)
-      @client = client
-    end
-
-    # @param id [ Interger ]
+  class Contacts < Alegra::Record
+    # @param id [ Integer ]
     # @return [ Hash ]
     def find(id)
       client.get("contacts/#{ id }")
     end
 
     # Returs all contacts
+    # @param params [ Hash ]
+    #   - start [ Integer ]
+    #   - limit [ Integer ]
+    #   - order_direction [ String ]
+    #   - order_field [ string ]
+    #   - query [ String ]
+    #   - type [ Integer ]
+    #   - metadata [ Boolean ]
+    #   - name [ String ]
+    #   - identification [ String ]
     # @return [ Array ]
-    def list()
-      client.get('contacts')
+    def list(params = {})
+      client.get('contacts', params)
     end
 
     # @param params [ Hash ]
@@ -36,8 +40,8 @@ module Alegra
     #   - internal_contacts [ Array ]
     # @return [ Hash ]
     def create(params)
-      _params = params.deep_camel_case_lower_keys
-      client.post('contacts', _params)
+      params = params.deep_camel_case_lower_keys
+      client.post('contacts', params)
     end
 
     # @param id [ Integer ]
@@ -59,14 +63,15 @@ module Alegra
     #   - internal_contacts [ Array ]
     # @return [ Hash ]
     def update(id, params)
-      _params = params.deep_camel_case_lower_keys
-      client.put("contacts/#{ id }", _params)
+      sanitize_params = params.deep_camel_case_lower_keys
+      client.put("contacts/#{id}", sanitize_params)
+
     end
 
     # @param id [ Integer ]
     # @return [ Hash ]
     def delete(id)
-      client.delete("contacts/#{ id }")
+      client.delete("contacts/#{id}")
     end
   end
 end

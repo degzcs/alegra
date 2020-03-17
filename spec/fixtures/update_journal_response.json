@@ -1,0 +1,43 @@
+{
+   "id": "193",
+   "entries": [
+      {
+         "id": "5009",
+         "client": null,
+         "name": "Salarios",
+         "description": null,
+         "debit": 3000000,
+         "credit": 0
+      },
+      {
+         "id": "5048",
+         "client": null,
+         "name": "Obligaciones financieras y préstamos a terceros",
+         "description": null,
+         "debit": 0,
+         "credit": 4150660
+      },
+      {
+         "id": "5008",
+         "client": null,
+         "name": "Prestaciones sociales",
+         "description": null,
+         "debit": 655000,
+         "credit": 0
+      },
+      {
+         "id": "5010",
+         "client": null,
+         "name": "Seguridad social y parafiscales",
+         "description": null,
+         "debit": 495660,
+         "credit": 0
+      }
+   ],
+   "client": null,
+   "date": "2020-03-05",
+   "observations": null,
+   "reference": null,
+   "status": "open",
+   "total": 4150660
+}

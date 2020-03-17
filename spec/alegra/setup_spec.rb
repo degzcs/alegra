@@ -6,7 +6,7 @@ describe Alegra::Setup do
   context 'connect with alegra API' do
     before :each do
       @setup_params = {
-        username: 'ejemploapi@dayrep.com',
+        username: 'ejemplo@ejemplo.com',
         apikey: '066b3ab09e72d4548e88'
       }
     end
@@ -16,7 +16,7 @@ describe Alegra::Setup do
       expect(setup.path).to eq 'api/v1/'
       expect(setup.username).to eq @setup_params[:username]
       expect(setup.apikey).to eq @setup_params[:apikey]
-      expect(setup.token).to eq Base64.encode64("#{ @setup_params[:username] }:#{ @setup_params[:apikey] }")
+      expect(setup.token).to eq Base64.strict_encode64("#{ @setup_params[:username] }:#{ @setup_params[:apikey] }")
     end
   end
 end

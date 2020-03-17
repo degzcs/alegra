@@ -1,12 +1,6 @@
 module Alegra
-  class Items
-    attr_reader :client
-
-    def initialize(client)
-      @client = client
-    end
-
-    # @param id [ Interger ]
+  class Items < Alegra::Record
+    # @param id [ Integer ]
     # @return [ Hash ]
     def find(id)
       client.get("items/#{ id }")
